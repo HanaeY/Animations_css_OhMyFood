@@ -1,0 +1,5 @@
+// order : Utils, Vendors, Base, Components, Layout, Pages, Themes
+//compilation : cmd  sass ./scss/main.scss ./css/style.css --watch 
+
+@import "Utils/variables";
+@import "Base/base";

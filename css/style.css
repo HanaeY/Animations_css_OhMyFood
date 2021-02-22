@@ -7,7 +7,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.logo {
+.logo, .restaurant-main__header--title {
   font-family: "Shrikhand", cursive;
 }
 
@@ -21,11 +21,24 @@ button {
   font-size: 15px;
 }
 
+header {
+  position: relative;
+}
 header .logo {
   text-align: center;
-  margin: 0px 0px 5px 0px;
+  margin: 0px;
   padding: 10px 0px 7px 0px;
   box-shadow: 0px 0px 10px #a6a6a6;
+}
+header .logo--pages-restaurant {
+  box-shadow: none;
+}
+header .fas {
+  position: absolute;
+  font-size: 1.5em;
+  color: #4d4d4d;
+  top: 20px;
+  left: 25px;
 }
 
 .footer {
@@ -225,6 +238,125 @@ header .logo {
   font-size: 1.7em;
   color: #8c8c8c;
   padding-right: 25px;
+}
+
+.restaurant-banner {
+  height: 250px;
+  background-image: url("../../images/photo_plat_la_palette_du_gout.jpg");
+  background-size: 100%;
+}
+
+.restaurant-main {
+  background-color: #f7f7f7;
+  border-radius: 35px 35px 0px 0px;
+  position: relative;
+  top: -30px;
+}
+.restaurant-main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+.restaurant-main__header--title, .restaurant-main__header .far {
+  font-size: 1.8em;
+}
+.restaurant-main__header .far {
+  font-size: 1.8em;
+  color: #8c8c8c;
+}
+.restaurant-main__menu {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+.restaurant-main__menu__course--status {
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+.restaurant-main__menu__course--status-underline {
+  background-color: #99E2D0;
+  width: 40px;
+  height: 4px;
+  margin-bottom: 10px;
+}
+
+.dish {
+  /*display: flex;
+  align-items: center;
+  height: 70px;*/
+  position: relative;
+  overflow: hidden;
+}
+.dish__card {
+  height: 70px;
+  background-color: white;
+  padding: 10px 12px;
+  border-radius: 17px;
+  position: relative;
+  box-shadow: 0px 5px 5px #ebebeb;
+  margin-bottom: 10px;
+}
+.dish__card--name {
+  margin: 0px;
+  padding-bottom: 5px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish__card--detail {
+  margin: 0px;
+  font-weight: lighter;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.dish__card--price {
+  margin: 0px;
+  padding-top: 30px;
+  position: absolute;
+  bottom: 13px;
+  right: 20px;
+}
+.dish__card:hover + .dish__selector {
+  transform: translateX(-100%);
+}
+.dish__card:hover .dish__card--price {
+  transform: translateX(-60px);
+}
+.dish__card:hover .dish__card--name {
+  width: 80%;
+}
+.dish__card:hover .dish__card--detail {
+  width: 60%;
+}
+.dish__selector {
+  height: 70px;
+  width: 60px;
+  background-color: #99E2D0;
+  color: white;
+  font-size: 1.5em;
+  border-radius: 0px 17px 17px 0px;
+  position: absolute;
+  bottom: 10px;
+  right: -60px;
+}
+.dish__selector .fas {
+  position: absolute;
+  top: 23px;
+  right: 18px;
+}
+
+#order {
+  width: 180px;
+  height: 50px;
+  margin: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

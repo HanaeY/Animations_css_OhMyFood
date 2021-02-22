@@ -21,11 +21,50 @@ button {
   font-size: 15px;
 }
 
-.logo {
+header .logo {
   text-align: center;
   margin: 0px 0px 5px 0px;
   padding: 10px 0px 7px 0px;
   box-shadow: 0px 0px 10px #a6a6a6;
+}
+
+.footer {
+  margin: auto;
+  background-color: #4d4d4d;
+}
+.footer__content {
+  width: 90%;
+  margin: auto;
+  color: #f7f7f7;
+}
+.footer__content__logo {
+  font-size: 1.3em;
+  font-weight: lighter;
+  margin: 0px;
+  padding-top: 20px;
+}
+.footer__content__nav ul {
+  list-style: none;
+  padding-left: 0px;
+}
+.footer__content__nav ul li:nth-child(1) {
+  padding-bottom: 10px;
+}
+.footer__content__nav ul .fa-utensils {
+  font-size: 0.9rem;
+}
+.footer__content__nav ul .fa-hands-helping {
+  font-size: 0.6rem;
+}
+.footer__content__nav ul li span {
+  padding-left: 5px;
+}
+.footer__content a {
+  text-decoration-line: none;
+  color: #f7f7f7;
+  font-weight: lighter;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
 .position {
@@ -123,7 +162,7 @@ button {
 .restaurants {
   background-color: #f7f7f7;
   width: 100%;
-  padding-top: 40px;
+  padding: 40px 0px 40px 0px;
 }
 .restaurants__title {
   width: 90%;
@@ -146,6 +185,13 @@ button {
 }
 .restaurants__container__card__img {
   width: 100%;
+  position: absolute;
+}
+.restaurants__container__card__img__palette, .restaurants__container__card__img__francaise, .restaurants__container__card__img__delice {
+  top: -50px;
+}
+.restaurants__container__card__img__note {
+  top: -150px;
 }
 .restaurants__container__card__status {
   position: absolute;
@@ -168,11 +214,11 @@ button {
 }
 .restaurants__container__card__content__name {
   margin: 0px;
-  padding: 10px 0px 5px 10px;
+  padding: 15px 0px 5px 10px;
 }
 .restaurants__container__card__content__place {
   margin: 0px;
-  padding: 0px 0px 10px 10px;
+  padding: 0px 0px 15px 10px;
   font-weight: 350;
 }
 .restaurants__container__card__content .fa-heart {

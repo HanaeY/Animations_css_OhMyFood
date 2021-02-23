@@ -11,6 +11,18 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
+a:visited {
+  outline: none;
+}
+
+a {
+  text-decoration-line: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 button {
   padding: 15px 20px;
   border-radius: 25px;
@@ -23,6 +35,7 @@ button {
 
 header {
   position: relative;
+  background-color: white;
 }
 header .logo {
   text-align: center;
@@ -63,21 +76,23 @@ header .fas {
 .footer__content__nav ul li:nth-child(1) {
   padding-bottom: 10px;
 }
+.footer__content__nav ul li span {
+  padding-left: 5px;
+}
+.footer__content__nav ul li a {
+  color: #f7f7f7;
+}
 .footer__content__nav ul .fa-utensils {
   font-size: 0.9rem;
 }
 .footer__content__nav ul .fa-hands-helping {
   font-size: 0.6rem;
 }
-.footer__content__nav ul li span {
-  padding-left: 5px;
-}
-.footer__content a {
-  text-decoration-line: none;
-  color: #f7f7f7;
+.footer__content__link {
   font-weight: lighter;
   display: inline-block;
   padding-bottom: 10px;
+  color: #f7f7f7;
 }
 
 .position {
@@ -138,6 +153,7 @@ header .fas {
 }
 .process__steps__step:hover {
   background-color: #f2eafb;
+  cursor: pointer;
 }
 .process__steps__step:hover .fas {
   color: #9356DC;
@@ -218,6 +234,7 @@ header .fas {
 }
 .restaurants__container__card__content {
   background-color: white;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -240,6 +257,10 @@ header .fas {
   padding-right: 25px;
 }
 
+.restaurant-page-container {
+  background-color: #f7f7f7;
+}
+
 .restaurant-banner {
   height: 250px;
   background-image: url("../../images/photo_plat_la_palette_du_gout.jpg");
@@ -250,6 +271,8 @@ header .fas {
   background-color: #f7f7f7;
   border-radius: 35px 35px 0px 0px;
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 25px;
   top: -30px;
 }
 .restaurant-main__header {
@@ -259,11 +282,13 @@ header .fas {
   width: 90%;
   margin: auto;
 }
-.restaurant-main__header--title, .restaurant-main__header .far {
+.restaurant-main__header--title {
   font-size: 1.8em;
+  margin-bottom: 10px;
 }
 .restaurant-main__header .far {
   font-size: 1.8em;
+  margin-top: 10px;
   color: #8c8c8c;
 }
 .restaurant-main__menu {
@@ -275,13 +300,13 @@ header .fas {
 .restaurant-main__menu__course--status {
   text-transform: uppercase;
   font-weight: lighter;
-  margin-bottom: 5px;
+  margin: 25px 0px 5px 0px;
 }
 .restaurant-main__menu__course--status-underline {
   background-color: #99E2D0;
   width: 40px;
   height: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .dish {
@@ -295,7 +320,7 @@ header .fas {
   border-radius: 17px;
   position: relative;
   box-shadow: 0px 5px 5px #ebebeb;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .dish__card--name {
   margin: 0px;
@@ -309,7 +334,7 @@ header .fas {
 .dish__card--detail {
   margin: 0px;
   font-weight: lighter;
-  width: 100%;
+  width: 90%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -347,7 +372,7 @@ header .fas {
   font-size: 1.5em;
   border-radius: 0px 17px 17px 0px;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   right: 0px;
   transform: translateX(100%);
   transition: transform 500ms ease-in-out;
@@ -360,10 +385,11 @@ header .fas {
   transition: transform 500ms ease-in-out;
 }
 
-#order {
+#order-button {
   width: 180px;
   height: 50px;
   margin: auto;
+  margin-top: 30px;
   display: block;
 }
 

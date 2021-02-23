@@ -14,8 +14,16 @@
         &__nav ul {
             list-style: none;
             padding-left: 0px;
-            li:nth-child(1) {
-                padding-bottom: 10px;
+            li {
+                &:nth-child(1) {
+                    padding-bottom: 10px;
+                }
+                span {
+                    padding-left: 5px;
+                }
+                a {
+                    color: $superlightgrey;
+                }
             }
             .fa-utensils {
                 font-size: 0.9rem;
@@ -23,16 +31,12 @@
             .fa-hands-helping {
                font-size: 0.6rem;
             }
-            li span {
-                padding-left: 5px;
-            }
         }
-        a {
-            text-decoration-line: none;
-            color: $superlightgrey;
+        &__link {
             font-weight: lighter;
             display: inline-block;
             padding-bottom: 10px;
+            color: $superlightgrey;
         }
     }
 }

@@ -13,3 +13,14 @@ body {
 }
 //font-size: 32px
 
+a:visited {
+    outline: none;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+button:hover {
+    cursor: pointer;
+}

@@ -48,11 +48,12 @@
         border-radius: 17px;
         box-shadow: 2px 5px 5px $lightgrey;
         margin-bottom: 20px;
-        width: 90%;
+        width: $mobile-width;
         padding-top: 32px; 
         padding-bottom: 32px;
         &:hover {
             background-color: $lightprimary;
+            cursor: pointer;
             .fas {
                 color: $primary;
             } 
@@ -135,6 +136,7 @@
             }
             &__content {
                 background-color: white;
+                color: black;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -159,6 +161,8 @@
         }
     }
 }
+
+
 
 
 

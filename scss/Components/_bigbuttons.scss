@@ -1,4 +1,4 @@
-button {
+.big-button {
     padding: 15px 20px;
     border-radius: 25px;
     color: white;
@@ -10,7 +10,14 @@ button {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    transition: box-shadow 400ms ease-in-out;
+    transition: box-shadow 250ms ease-in-out;
+    &--order {
+        width: 180px;
+        height: 50px;
+        margin: auto;
+        margin-top: 30px;
+        display: block;
+    }
     &::after {
         position: absolute;
         content: "";
@@ -20,10 +27,10 @@ button {
         left: 0;
         background: linear-gradient(175deg, lighten($secondary, 10%), lighten($primary, 10%));
         opacity: 0;
-        transition: opacity 400ms ease-in-out;
+        transition: opacity 250ms ease-in-out;
         z-index: -1;
     }
-    &:hover {
+    &:hover, &:active {
         box-shadow: 4px 5px 9px lighten($grey, 20%);
         &::after {
             opacity: 1;

@@ -1,0 +1,40 @@
+@keyframes heartfilling {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.heart-button {
+    position: relative;
+    &:hover, &:active {
+        .far {
+            opacity: 0;
+        }
+        .fas {
+            animation: heartfilling 1000ms forwards;
+        }
+    }
+    .far {
+        font-size: 1.7em;
+        color: $grey;
+        padding-right: 25px;
+        opacity: 1;
+        transition: opacity 200ms;
+    }
+    .fas {
+        font-size: 1.7em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(60deg, $secondary, $primary);
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+    }
+}

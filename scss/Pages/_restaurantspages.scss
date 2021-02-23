@@ -34,13 +34,11 @@
         width: $mobile-width;
         margin: auto;
         &--title {
-            font-size: 1.8em;
+            font-size: 1.7em;
             margin-bottom: 10px;
         }
-        .far {
-            font-size: 1.8em;
-            margin-top: 10px;
-            color: $grey;
+        .fas, .far {
+            margin-top: 13px;
         }
     }
     &__menu {
@@ -138,12 +136,4 @@
             transition: transform  500ms ease-in-out;
         }
     }
-}
-
-#order-button {
-    width: 180px;
-    height: 50px;
-    margin: auto;
-    margin-top: 30px;
-    display:block;
 }

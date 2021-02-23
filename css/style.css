@@ -24,7 +24,7 @@ button:hover {
   cursor: pointer;
 }
 
-button {
+.big-button {
   padding: 15px 20px;
   border-radius: 25px;
   color: white;
@@ -36,9 +36,16 @@ button {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  transition: box-shadow 400ms ease-in-out;
+  transition: box-shadow 250ms ease-in-out;
 }
-button::after {
+.big-button--order {
+  width: 180px;
+  height: 50px;
+  margin: auto;
+  margin-top: 30px;
+  display: block;
+}
+.big-button::after {
   position: absolute;
   content: "";
   top: 0;
@@ -47,14 +54,52 @@ button::after {
   left: 0;
   background: linear-gradient(175deg, #fface4, #ae80e5);
   opacity: 0;
-  transition: opacity 400ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
   z-index: -1;
 }
-button:hover {
+.big-button:hover, .big-button:active {
   box-shadow: 4px 5px 9px #bfbfbf;
 }
-button:hover::after {
+.big-button:hover::after, .big-button:active::after {
   opacity: 1;
+}
+
+@keyframes heartfilling {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.heart-button {
+  position: relative;
+}
+.heart-button:hover .far, .heart-button:active .far {
+  opacity: 0;
+}
+.heart-button:hover .fas, .heart-button:active .fas {
+  animation: heartfilling 1000ms forwards;
+}
+.heart-button .far {
+  font-size: 1.7em;
+  color: #8c8c8c;
+  padding-right: 25px;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.heart-button .fas {
+  font-size: 1.7em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(60deg, #FF79D3, #9356DC);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
 }
 
 header {
@@ -258,7 +303,6 @@ header .fas {
 }
 .restaurants__container__card__content {
   background-color: white;
-  color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -267,18 +311,15 @@ header .fas {
   width: 100%;
 }
 .restaurants__container__card__content__name {
+  color: black;
   margin: 0px;
   padding: 15px 0px 5px 10px;
 }
 .restaurants__container__card__content__place {
+  color: black;
   margin: 0px;
   padding: 0px 0px 15px 10px;
   font-weight: 350;
-}
-.restaurants__container__card__content .fa-heart {
-  font-size: 1.7em;
-  color: #8c8c8c;
-  padding-right: 25px;
 }
 
 .restaurant-page-container {
@@ -319,13 +360,11 @@ header .fas {
   margin: auto;
 }
 .restaurant-main__header--title {
-  font-size: 1.8em;
+  font-size: 1.7em;
   margin-bottom: 10px;
 }
-.restaurant-main__header .far {
-  font-size: 1.8em;
-  margin-top: 10px;
-  color: #8c8c8c;
+.restaurant-main__header .fas, .restaurant-main__header .far {
+  margin-top: 13px;
 }
 .restaurant-main__menu {
   display: flex;
@@ -421,12 +460,6 @@ header .fas {
   transition: transform 500ms ease-in-out;
 }
 
-#order-button {
-  width: 180px;
-  height: 50px;
-  margin: auto;
-  margin-top: 30px;
-  display: block;
-}
+/*TO DO : vérifier le comportement des boutons avec active et hover sur dt et mobile*/
 
 /*# sourceMappingURL=style.css.map */

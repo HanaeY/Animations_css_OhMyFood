@@ -4,8 +4,20 @@
 
 .restaurant-banner {
     height: 250px;
-    background-image: url("../../images/photo_plat_la_palette_du_gout.jpg");
     background-size: 100%;
+    &--palette {
+        background-image: url("../images/photo_plat_la_palette_du_gout.jpg");
+    }
+    &--note {
+        background-image: url("../images/photo_plat_la_note_enchantée.jpg");
+        background-position: center;
+    }
+    &--francaise {
+        background-image: url("../images/photo_plat_a_la_francaise.jpg");
+    }
+    &--delice {
+        background-image: url("../images/photo_plat_le_delice_des_sens.jpg");
+    }
 }
 
 .restaurant-main {
@@ -73,7 +85,6 @@
         &--detail {
             margin: 0px;
             font-weight: lighter;
-            //width: 100%;
             width: 90%;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -89,7 +100,7 @@
             transform: translateX(0);
             transition: transform 450ms ease-in-out;
         }
-        &:hover {
+        &:hover, &:active {
             + .dish__selector {
                 transform: translateX(0%);
                 .fas {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -31,6 +32,29 @@ button {
   background: linear-gradient(175deg, #FF79D3, #9356DC);
   border: none;
   font-size: 15px;
+  box-shadow: 2px 3px 7px #bfbfbf;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: box-shadow 400ms ease-in-out;
+}
+button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(175deg, #fface4, #ae80e5);
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+  z-index: -1;
+}
+button:hover {
+  box-shadow: 4px 5px 9px #bfbfbf;
+}
+button:hover::after {
+  opacity: 1;
 }
 
 header {
@@ -263,8 +287,20 @@ header .fas {
 
 .restaurant-banner {
   height: 250px;
-  background-image: url("../../images/photo_plat_la_palette_du_gout.jpg");
   background-size: 100%;
+}
+.restaurant-banner--palette {
+  background-image: url("../images/photo_plat_la_palette_du_gout.jpg");
+}
+.restaurant-banner--note {
+  background-image: url("../images/photo_plat_la_note_enchantée.jpg");
+  background-position: center;
+}
+.restaurant-banner--francaise {
+  background-image: url("../images/photo_plat_a_la_francaise.jpg");
+}
+.restaurant-banner--delice {
+  background-image: url("../images/photo_plat_le_delice_des_sens.jpg");
 }
 
 .restaurant-main {
@@ -349,19 +385,19 @@ header .fas {
   transform: translateX(0);
   transition: transform 450ms ease-in-out;
 }
-.dish__card:hover + .dish__selector {
+.dish__card:hover + .dish__selector, .dish__card:active + .dish__selector {
   transform: translateX(0%);
 }
-.dish__card:hover + .dish__selector .fas {
+.dish__card:hover + .dish__selector .fas, .dish__card:active + .dish__selector .fas {
   transform: rotate(1turn);
 }
-.dish__card:hover .dish__card--price {
+.dish__card:hover .dish__card--price, .dish__card:active .dish__card--price {
   transform: translateX(-60px);
 }
-.dish__card:hover .dish__card--name {
+.dish__card:hover .dish__card--name, .dish__card:active .dish__card--name {
   width: 80%;
 }
-.dish__card:hover .dish__card--detail {
+.dish__card:hover .dish__card--detail, .dish__card:active .dish__card--detail {
   width: 60%;
 }
 .dish__selector {

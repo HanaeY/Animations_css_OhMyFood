@@ -1,3 +1,22 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+@-webkit-keyframes heartfilling {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes heartfilling {
     0% {
         opacity: 0;
@@ -18,6 +37,7 @@
             opacity: 0;
         }
         .fas {
+            -webkit-animation: heartfilling 1000ms forwards;;
             animation: heartfilling 1000ms forwards;
         }
     }
@@ -26,6 +46,56 @@
         color: $grey;
         padding-right: 25px;
         opacity: 1;
+        -webkit-transition: 200ms;
+        -webkit-transition: opacity 200ms;
+        -o-transition: opacity 200ms;
+        transition: opacity 200ms;
+    }
+    .fas {
+        font-size: 1.7em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: -o-linear-gradient(30deg, $secondary, $primary);
+        background: linear-gradient(60deg, $secondary, $primary);
+        -webkit-background-clip: text;
+                background-clip: text;
+        color: transparent;
+        opacity: 0;
+    }
+}
+
+
+/*@keyframes heartfilling {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.heart-button {
+    position: relative;
+    &:hover, &:active {
+        outline: none;
+        .far {
+            opacity: 0;
+        }
+        .fas {
+            -webkit-animation: heartfilling 1000ms forwards;;
+            animation: heartfilling 1000ms forwards;
+        }
+    }
+    .far {
+        font-size: 1.7em;
+        color: $grey;
+        padding-right: 25px;
+        opacity: 1;
+        -webkit-transition: 200ms;
         transition: opacity 200ms;
     }
     .fas {
@@ -39,3 +109,4 @@
         opacity: 0;
     }
 }
+*/

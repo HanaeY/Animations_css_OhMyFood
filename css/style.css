@@ -70,6 +70,23 @@ button:hover {
   opacity: 1;
 }
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+@-webkit-keyframes heartfilling {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes heartfilling {
   0% {
     opacity: 0;
@@ -91,6 +108,7 @@ button:hover {
   opacity: 0;
 }
 .heart-button:hover .fas, .heart-button:active .fas {
+  -webkit-animation: heartfilling 1000ms forwards;
   animation: heartfilling 1000ms forwards;
 }
 .heart-button .far {
@@ -98,6 +116,9 @@ button:hover {
   color: #8c8c8c;
   padding-right: 25px;
   opacity: 1;
+  -webkit-transition: 200ms;
+  -webkit-transition: opacity 200ms;
+  -o-transition: opacity 200ms;
   transition: opacity 200ms;
 }
 .heart-button .fas {
@@ -105,12 +126,58 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
+  background: -o-linear-gradient(30deg, #FF79D3, #9356DC);
   background: linear-gradient(60deg, #FF79D3, #9356DC);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   opacity: 0;
 }
 
+/*@keyframes heartfilling {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.heart-button {
+    position: relative;
+    &:hover, &:active {
+        outline: none;
+        .far {
+            opacity: 0;
+        }
+        .fas {
+            -webkit-animation: heartfilling 1000ms forwards;;
+            animation: heartfilling 1000ms forwards;
+        }
+    }
+    .far {
+        font-size: 1.7em;
+        color: $grey;
+        padding-right: 25px;
+        opacity: 1;
+        -webkit-transition: 200ms;
+        transition: opacity 200ms;
+    }
+    .fas {
+        font-size: 1.7em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(60deg, $secondary, $primary);
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+    }
+}
+*/
 header {
   position: relative;
   background-color: white;

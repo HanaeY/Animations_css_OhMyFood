@@ -5,6 +5,9 @@
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
+    @include small-mobile {
+        font-size: 0.9rem;
+    }
 }
 //font-size: 16px
 
@@ -23,12 +26,4 @@ a {
 
 button:hover {
     cursor: pointer;
-}
-
-/* small mobiles */
-
-body {
-    @include small-mobile {
-        font-size: 0.9rem;
-    }
 }

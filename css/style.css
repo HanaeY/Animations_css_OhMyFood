@@ -7,6 +7,11 @@ body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
 }
+@media all and (max-width: 320px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
 
 .logo, .restaurant-main__header--title {
   font-family: "Shrikhand", cursive;
@@ -22,13 +27,6 @@ a {
 
 button:hover {
   cursor: pointer;
-}
-
-/* small mobiles */
-@media all and (max-width: 320px) {
-  body {
-    font-size: 0.9rem;
-  }
 }
 
 .big-button {
@@ -207,13 +205,19 @@ header .fas {
 .process {
   padding-bottom: 40px;
 }
+@media all and (min-width: 1024px) {
+  .process {
+    max-width: 1064px;
+    margin: auto;
+  }
+}
 .process__title {
   width: 90%;
   margin: auto;
   padding-top: 40px;
   padding-bottom: 30px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .process__title {
     text-align: center;
   }
@@ -222,6 +226,12 @@ header .fas {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media all and (min-width: 1024px) {
+  .process__steps {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .process__steps__step {
   display: flex;
@@ -235,9 +245,14 @@ header .fas {
   padding-top: 33px;
   padding-bottom: 33px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .process__steps__step {
     width: 60%;
+  }
+}
+@media all and (min-width: 1024px) {
+  .process__steps__step {
+    margin: 20px;
   }
 }
 .process__steps__step:hover {
@@ -266,34 +281,54 @@ header .fas {
 .process__steps__step .fa-mobile-alt {
   left: 40px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .process__steps__step .fa-mobile-alt {
     left: 120px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .process__steps__step .fa-mobile-alt {
+    left: 40px;
   }
 }
 .process__steps__step .fa-list-ul {
   left: 35px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .process__steps__step .fa-list-ul {
     left: 115px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .process__steps__step .fa-list-ul {
+    left: 35px;
   }
 }
 .process__steps__step .fa-store {
   left: 35px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .process__steps__step .fa-store {
     left: 115px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .process__steps__step .fa-store {
+    left: 35px;
   }
 }
 .process__steps__step__detail {
   position: absolute;
   left: 75px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .process__steps__step__detail {
     left: 150px;
+  }
+}
+@media all and (min-width: 1024px) {
+  .process__steps__step__detail {
+    left: 75px;
   }
 }
 
@@ -307,7 +342,7 @@ header .fas {
   margin: 0px auto;
   padding-bottom: 20px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .restaurants__title {
     text-align: center;
   }
@@ -318,11 +353,16 @@ header .fas {
   width: 90%;
   margin: auto;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .restaurants__container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+@media all and (min-width: 1300px) {
+  .restaurants__container {
+    max-width: 1064px;
   }
 }
 .restaurants__container__card {
@@ -338,10 +378,15 @@ header .fas {
     height: 190px;
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .restaurants__container__card {
     flex: 35%;
     margin: 10px;
+  }
+}
+@media all and (min-width: 1300px) {
+  .restaurants__container__card {
+    margin: 30px;
   }
 }
 .restaurants__container__card__img {
@@ -398,6 +443,11 @@ header .fas {
     height: 200px;
   }
 }
+@media all and (min-width: 1300px) {
+  .restaurant-banner {
+    background-position: center;
+  }
+}
 .restaurant-banner--palette {
   background-image: url("../images/photo_plat_la_palette_du_gout.jpg");
 }
@@ -427,6 +477,11 @@ header .fas {
   width: 90%;
   margin: auto;
 }
+@media all and (min-width: 1300px) {
+  .restaurant-main__header {
+    justify-content: start;
+  }
+}
 .restaurant-main__header--title {
   font-size: 1.7em;
   margin-bottom: 10px;
@@ -439,11 +494,28 @@ header .fas {
     padding-right: 0px;
   }
 }
+@media all and (min-width: 1300px) {
+  .restaurant-main__header .fas, .restaurant-main__header .far {
+    padding-left: 50px;
+  }
+}
 .restaurant-main__menu {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: auto;
+}
+@media all and (min-width: 1300px) {
+  .restaurant-main__menu {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+}
+@media all and (min-width: 1300px) {
+  .restaurant-main__menu__course {
+    margin: 15px;
+  }
 }
 .restaurant-main__menu__course--status {
   text-transform: uppercase;
@@ -461,10 +533,15 @@ header .fas {
   position: relative;
   overflow: hidden;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 736px) {
   .dish {
     width: 70%;
     margin: auto;
+  }
+}
+@media all and (min-width: 1300px) {
+  .dish {
+    width: 400px;
   }
 }
 .dish__card {
@@ -498,6 +575,11 @@ header .fas {
   text-overflow: ellipsis;
   overflow: hidden;
   transition: width 400ms ease-in-out;
+}
+@media all and (min-width: 736px) {
+  .dish__card--detail {
+    width: 100%;
+  }
 }
 .dish__card--price {
   margin: 0px;

@@ -8,6 +8,9 @@
     @include small-mobile {
         height: 200px;
     }
+    @include desktop {
+        background-position: center;
+    }
     &--palette {
         background-image: url("../images/photo_plat_la_palette_du_gout.jpg");
     }
@@ -36,6 +39,9 @@
         align-items: center;
         width: $mobile-width;
         margin: auto;
+        @include desktop {
+            justify-content: start;
+        }
         &--title {
             font-size: 1.7em;
             margin-bottom: 10px;
@@ -45,6 +51,9 @@
             @include small-mobile {
                 padding-right: 0px;
             }
+            @include desktop {
+                padding-left: 50px;
+            }
         }
     }
     &__menu {
@@ -52,6 +61,16 @@
         flex-direction: column;
         width: $mobile-width;
         margin: auto;
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1200px;
+        }
+        &__course {
+            @include desktop {
+                margin: 15px;
+            }
+        }
         &__course--status {
             text-transform: uppercase;
             font-weight: lighter;
@@ -72,6 +91,9 @@
     @include tablet {
         width: 70%;
         margin: auto;
+    }
+    @include desktop {
+        width: 400px;
     }
     &__card {
         height: 70px;
@@ -101,6 +123,9 @@
             text-overflow: ellipsis;
             overflow: hidden;
             transition: width 400ms ease-in-out;
+            @include tablet {
+                width: 100%;
+            }
         }
         &--price {
             margin: 0px;

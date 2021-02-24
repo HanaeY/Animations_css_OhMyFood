@@ -4,6 +4,7 @@
 @import "Utils/variables";
 @import "Utils/mixins";
 @import "Base/base";
+@import "Components/loadingspinner";
 @import "Components/bigbuttons";
 @import "Components/heartbutton";
 @import "Layout/header";
@@ -11,4 +12,4 @@
 @import "Pages/index";
 @import "Pages/restaurantspages";
 
-/* TO DO : animation coeur à revoir sur chrome */
+

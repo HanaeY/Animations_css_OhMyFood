@@ -24,3 +24,11 @@ a {
 button:hover {
     cursor: pointer;
 }
+
+/* small mobiles */
+
+body {
+    @include small-mobile {
+        font-size: 0.9rem;
+    }
+}

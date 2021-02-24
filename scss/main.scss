@@ -2,6 +2,7 @@
 //compilation : cmd  sass ./scss/main.scss ./css/style.css --watch 
 
 @import "Utils/variables";
+@import "Utils/mixins";
 @import "Base/base";
 @import "Components/bigbuttons";
 @import "Components/heartbutton";
@@ -10,4 +11,4 @@
 @import "Pages/index";
 @import "Pages/restaurantspages";
 
-
+/* TO DO : animation coeur à revoir sur chrome */

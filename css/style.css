@@ -24,6 +24,13 @@ button:hover {
   cursor: pointer;
 }
 
+/* small mobiles */
+@media all and (max-width: 320px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
 .big-button {
   padding: 16px 20px;
   border-radius: 25px;
@@ -284,6 +291,11 @@ header .fas {
   overflow: hidden;
   height: 250px;
 }
+@media all and (max-width: 320px) {
+  .restaurants__container__card {
+    height: 190px;
+  }
+}
 .restaurants__container__card__img {
   width: 100%;
   position: absolute;
@@ -333,6 +345,11 @@ header .fas {
   height: 250px;
   background-size: 100%;
 }
+@media all and (max-width: 320px) {
+  .restaurant-banner {
+    height: 200px;
+  }
+}
 .restaurant-banner--palette {
   background-image: url("../images/photo_plat_la_palette_du_gout.jpg");
 }
@@ -368,6 +385,11 @@ header .fas {
 }
 .restaurant-main__header .fas, .restaurant-main__header .far {
   margin-top: 13px;
+}
+@media all and (max-width: 320px) {
+  .restaurant-main__header .fas, .restaurant-main__header .far {
+    padding-right: 0px;
+  }
 }
 .restaurant-main__menu {
   display: flex;
@@ -408,6 +430,11 @@ header .fas {
   text-overflow: ellipsis;
   overflow: hidden;
   transition: width 400ms ease-in-out;
+}
+@media all and (max-width: 320px) {
+  .dish__card--name {
+    padding-bottom: 8px;
+  }
 }
 .dish__card--detail {
   margin: 0px;
@@ -463,6 +490,6 @@ header .fas {
   transition: transform 500ms ease-in-out;
 }
 
-/*TO DO : vérifier le comportement des boutons avec active et hover sur dt et mobile et retirer les outline après le clic*/
+/* TO DO : animation coeur à revoir sur chrome */
 
 /*# sourceMappingURL=style.css.map */

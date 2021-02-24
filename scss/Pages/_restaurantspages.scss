@@ -5,6 +5,9 @@
 .restaurant-banner {
     height: 250px;
     background-size: 100%;
+    @include small-mobile {
+        height: 200px;
+    }
     &--palette {
         background-image: url("../images/photo_plat_la_palette_du_gout.jpg");
     }
@@ -39,6 +42,9 @@
         }
         .fas, .far {
             margin-top: 13px;
+            @include small-mobile {
+                padding-right: 0px;
+            }
         }
     }
     &__menu {
@@ -79,6 +85,9 @@
             text-overflow: ellipsis;
             overflow: hidden;
             transition: width 400ms ease-in-out;
+            @include small-mobile {
+                padding-bottom: 8px;
+            }
         }
         &--detail {
             margin: 0px;

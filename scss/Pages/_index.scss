@@ -115,6 +115,9 @@
             border-radius: 17px;
             overflow: hidden;
             height: 250px;
+            @include small-mobile {
+                height: 190px;
+            }
             &__img {
                 width: 100%;
                 position: absolute;

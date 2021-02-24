@@ -213,6 +213,11 @@ header .fas {
   padding-top: 40px;
   padding-bottom: 30px;
 }
+@media all and (min-width: 768px) {
+  .process__title {
+    text-align: center;
+  }
+}
 .process__steps {
   display: flex;
   flex-direction: column;
@@ -229,6 +234,11 @@ header .fas {
   width: 90%;
   padding-top: 33px;
   padding-bottom: 33px;
+}
+@media all and (min-width: 768px) {
+  .process__steps__step {
+    width: 60%;
+  }
 }
 .process__steps__step:hover {
   background-color: #f2eafb;
@@ -256,15 +266,35 @@ header .fas {
 .process__steps__step .fa-mobile-alt {
   left: 40px;
 }
+@media all and (min-width: 768px) {
+  .process__steps__step .fa-mobile-alt {
+    left: 120px;
+  }
+}
 .process__steps__step .fa-list-ul {
   left: 35px;
+}
+@media all and (min-width: 768px) {
+  .process__steps__step .fa-list-ul {
+    left: 115px;
+  }
 }
 .process__steps__step .fa-store {
   left: 35px;
 }
+@media all and (min-width: 768px) {
+  .process__steps__step .fa-store {
+    left: 115px;
+  }
+}
 .process__steps__step__detail {
   position: absolute;
   left: 75px;
+}
+@media all and (min-width: 768px) {
+  .process__steps__step__detail {
+    left: 150px;
+  }
 }
 
 .restaurants {
@@ -277,11 +307,23 @@ header .fas {
   margin: 0px auto;
   padding-bottom: 20px;
 }
+@media all and (min-width: 768px) {
+  .restaurants__title {
+    text-align: center;
+  }
+}
 .restaurants__container {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: auto;
+}
+@media all and (min-width: 768px) {
+  .restaurants__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .restaurants__container__card {
   position: relative;
@@ -294,6 +336,12 @@ header .fas {
 @media all and (max-width: 320px) {
   .restaurants__container__card {
     height: 190px;
+  }
+}
+@media all and (min-width: 768px) {
+  .restaurants__container__card {
+    flex: 35%;
+    margin: 10px;
   }
 }
 .restaurants__container__card__img {
@@ -412,6 +460,12 @@ header .fas {
 .dish {
   position: relative;
   overflow: hidden;
+}
+@media all and (min-width: 768px) {
+  .dish {
+    width: 70%;
+    margin: auto;
+  }
 }
 .dish__card {
   height: 70px;

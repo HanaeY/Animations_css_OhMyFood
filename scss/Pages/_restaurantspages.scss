@@ -69,6 +69,10 @@
 .dish {
     position: relative;
     overflow: hidden;
+    @include tablet {
+        width: 70%;
+        margin: auto;
+    }
     &__card {
         height: 70px;
         background-color: white;

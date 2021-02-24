@@ -36,6 +36,9 @@
         margin: auto;
         padding-top: 40px;
         padding-bottom: 30px;
+        @include tablet {
+            text-align: center;
+        }
     }
     &__steps {
     display: flex;
@@ -52,6 +55,9 @@
         width: $mobile-width;
         padding-top: 33px; 
         padding-bottom: 33px;
+        @include tablet {
+            width: 60%;
+        }
         &:hover {
             background-color: $lightprimary;
             cursor: pointer;
@@ -78,17 +84,29 @@
         .fa {
             &-mobile-alt {
                 left: 40px;
+                @include tablet {
+                    left: 120px;
+                }
             }
             &-list-ul {
                 left: 35px;
+                @include tablet {
+                    left: 115px;
+                }
             }
             &-store {
                 left: 35px;
+                @include tablet {
+                    left: 115px;
+                }
             }
         }
         &__detail {
             position: absolute;
             left: 75px;
+            @include tablet {
+                left: 150px;
+            }
         }
     }
     }
@@ -102,12 +120,20 @@
         width: $mobile-width;
         margin: 0px auto;
         padding-bottom: 20px;
+        @include tablet {
+            text-align: center;
+        }
     }
     &__container {
         display: flex;
         flex-direction: column;
         width: $mobile-width;
         margin: auto;
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
         &__card {
             position: relative;
             margin-bottom: 20px;
@@ -117,6 +143,10 @@
             height: 250px;
             @include small-mobile {
                 height: 190px;
+            }
+            @include tablet {
+                flex: 35%;
+                margin: 10px;
             }
             &__img {
                 width: 100%;

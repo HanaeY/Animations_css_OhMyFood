@@ -23,13 +23,14 @@
     &__subtitle {
         width: 90%;
         margin: auto;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         font-weight: 100;
+        font-size: 1.15em;
     }
 }
 
 .process {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     &__title {
         width: $mobile-width;
         margin: auto;
@@ -47,10 +48,10 @@
         background-color: $superlightgrey;
         border-radius: 17px;
         box-shadow: 2px 5px 5px $lightgrey;
-        margin-bottom: 20px;
+        margin: 0px 0px 20px 10px;
         width: $mobile-width;
-        padding-top: 32px; 
-        padding-bottom: 32px;
+        padding-top: 33px; 
+        padding-bottom: 33px;
         &:hover {
             background-color: $lightprimary;
             cursor: pointer;
@@ -76,18 +77,18 @@
         }
         .fa {
             &-mobile-alt {
-                left: 38px;
+                left: 40px;
             }
             &-list-ul {
                 left: 35px;
             }
             &-store {
-                left: 33px;
+                left: 35px;
             }
         }
         &__detail {
             position: absolute;
-            left: 70px;
+            left: 75px;
         }
     }
     }
@@ -129,7 +130,7 @@
                 top: 5px;
                 right: 15px;
                 background-color: $tertiary;
-                color: darken($tertiary, 30%);
+                color: darken($tertiary, 35%);
                 font-size: 0.9em;
                 padding: 0.4em 0.9em;
                 border-radius: 4px;

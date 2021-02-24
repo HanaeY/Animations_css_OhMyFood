@@ -1,5 +1,5 @@
 .big-button {
-    padding: 15px 20px;
+    padding: 16px 20px;
     border-radius: 25px;
     color: white;
     font-weight: 600;
@@ -32,6 +32,7 @@
     }
     &:hover, &:active {
         box-shadow: 4px 5px 9px lighten($grey, 20%);
+        outline: none;
         &::after {
             opacity: 1;
         }

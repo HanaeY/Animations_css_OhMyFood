@@ -13,6 +13,7 @@
 .heart-button {
     position: relative;
     &:hover, &:active {
+        outline: none;
         .far {
             opacity: 0;
         }

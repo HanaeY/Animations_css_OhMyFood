@@ -5,7 +5,8 @@
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 1;
     z-index: 2;
-    animation: loading-page-opacity $random-duration ease-in-out forwards, loading-page-translation 1ms $random-duration forwards;
+    -webkit-animation: loading-page-opacity $random-duration ease-in-out forwards, loading-page-translation 1ms $random-duration forwards;
+            animation: loading-page-opacity $random-duration ease-in-out forwards, loading-page-translation 1ms $random-duration forwards;
     &__spinner {
         position: fixed;
         display: block;
@@ -15,7 +16,17 @@
         z-index: 3;
         font-size: 4em;
         color: $tertiary;
-        animation: rotate-spinner $random-duration ease-in-out;
+        -webkit-animation: rotate-spinner $random-duration ease-in-out;
+                animation: rotate-spinner $random-duration ease-in-out;
+    }
+}
+
+@-webkit-keyframes rotate-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(4turn);
     }
 }
 
@@ -28,6 +39,18 @@
     }
 }
 
+@-webkit-keyframes loading-page-opacity {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes loading-page-opacity {
     0% {
         opacity: 1;
@@ -37,6 +60,15 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+@-webkit-keyframes loading-page-translation {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
     }
 }
 

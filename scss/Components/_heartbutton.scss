@@ -46,9 +46,6 @@
         color: $grey;
         padding-right: 25px;
         opacity: 1;
-        -webkit-transition: 200ms;
-        -webkit-transition: opacity 200ms;
-        -o-transition: opacity 200ms;
         transition: opacity 200ms;
     }
     .fas {
@@ -56,7 +53,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: -o-linear-gradient(30deg, $secondary, $primary);
         background: linear-gradient(60deg, $secondary, $primary);
         -webkit-background-clip: text;
                 background-clip: text;

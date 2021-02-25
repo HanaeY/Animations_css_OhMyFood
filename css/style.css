@@ -507,6 +507,7 @@ header .fas {
   }
 }
 .restaurants__container__card {
+  display: block;
   position: relative;
   margin-bottom: 20px;
   box-shadow: 3px 5px 5px #e6e6e6;
@@ -568,7 +569,7 @@ header .fas {
   color: black;
   margin: 0px;
   padding: 0px 0px 15px 10px;
-  font-weight: 350;
+  font-weight: 300;
 }
 
 .restaurant-page-container {

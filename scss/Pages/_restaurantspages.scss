@@ -99,7 +99,7 @@
     opacity: 0;
     transform: translateY(10%);
     animation: dish-animation $dish-anim-duration ease-in-out forwards;
-    @for $i from 1 to 10 {
+    @for $i from 1 to 11 {
         &--#{$i} {
             animation-delay: $dish-anim-delay * ($i - 1);
         }
@@ -114,6 +114,7 @@
         margin-bottom: 15px;
         &--name {
             margin: 0px;
+            font-weight: 500;
             padding-bottom: 5px;
             width: 100%;
             white-space: nowrap;
@@ -132,6 +133,9 @@
             text-overflow: ellipsis;
             overflow: hidden;
             transition: width 400ms ease-in-out;
+            @include small-mobile {
+                width: 85%;
+            }
             @include tablet {
                 width: 100%;
             }
@@ -159,7 +163,10 @@
                 width: 80%;
             }
             .dish__card--detail {
-                width: 60%;
+                width: 65%;
+                @include small-mobile {
+                    width: 60%;
+                }
             }
         }
     }

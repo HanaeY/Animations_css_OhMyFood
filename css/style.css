@@ -690,6 +690,9 @@ header .fas {
 .dish--9 {
   animation-delay: 2400ms;
 }
+.dish--10 {
+  animation-delay: 2700ms;
+}
 .dish__card {
   height: 70px;
   background-color: white;
@@ -701,6 +704,7 @@ header .fas {
 }
 .dish__card--name {
   margin: 0px;
+  font-weight: 500;
   padding-bottom: 5px;
   width: 100%;
   white-space: nowrap;
@@ -721,6 +725,11 @@ header .fas {
   text-overflow: ellipsis;
   overflow: hidden;
   transition: width 400ms ease-in-out;
+}
+@media all and (max-width: 320px) {
+  .dish__card--detail {
+    width: 85%;
+  }
 }
 @media all and (min-width: 736px) {
   .dish__card--detail {
@@ -749,7 +758,12 @@ header .fas {
   width: 80%;
 }
 .dish__card:hover .dish__card--detail, .dish__card:active .dish__card--detail {
-  width: 60%;
+  width: 65%;
+}
+@media all and (max-width: 320px) {
+  .dish__card:hover .dish__card--detail, .dish__card:active .dish__card--detail {
+    width: 60%;
+  }
 }
 .dish__selector {
   height: 70px;

@@ -647,6 +647,10 @@ header .fas {
 .dish {
   position: relative;
   overflow: hidden;
+  /*animation*/
+  opacity: 0;
+  transform: translateY(10%);
+  animation: dish-animation 800ms ease-in-out forwards;
 }
 @media all and (min-width: 736px) {
   .dish {
@@ -658,6 +662,33 @@ header .fas {
   .dish {
     width: 400px;
   }
+}
+.dish--1 {
+  animation-delay: 0ms;
+}
+.dish--2 {
+  animation-delay: 300ms;
+}
+.dish--3 {
+  animation-delay: 600ms;
+}
+.dish--4 {
+  animation-delay: 900ms;
+}
+.dish--5 {
+  animation-delay: 1200ms;
+}
+.dish--6 {
+  animation-delay: 1500ms;
+}
+.dish--7 {
+  animation-delay: 1800ms;
+}
+.dish--8 {
+  animation-delay: 2100ms;
+}
+.dish--9 {
+  animation-delay: 2400ms;
 }
 .dish__card {
   height: 70px;
@@ -739,6 +770,21 @@ header .fas {
   right: 18px;
   transform: rotate(0);
   transition: transform 500ms ease-in-out;
+}
+
+@keyframes dish-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

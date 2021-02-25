@@ -95,6 +95,15 @@
     @include desktop {
         width: 400px;
     }
+    /*animation*/
+    opacity: 0;
+    transform: translateY(10%);
+    animation: dish-animation $dish-anim-duration ease-in-out forwards;
+    @for $i from 1 to 10 {
+        &--#{$i} {
+            animation-delay: $dish-anim-delay * ($i - 1);
+        }
+    }
     &__card {
         height: 70px;
         background-color: white;
@@ -173,5 +182,20 @@
             transform: rotate(0);
             transition: transform  500ms ease-in-out;
         }
+    }
+}
+
+@keyframes dish-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

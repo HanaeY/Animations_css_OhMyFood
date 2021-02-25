@@ -2,10 +2,11 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(69, 71, 71, 0.7);
+    //background-color: rgba(69, 71, 71, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     opacity: 1;
     z-index: 2;
-    animation: loading-page-opacity 2000ms ease-in-out forwards;
+    animation: loading-page-opacity $random-duration ease-in-out forwards, loading-page-translation 1ms $random-duration forwards;
     &__spinner {
         position: fixed;
         display: block;
@@ -15,19 +16,16 @@
         z-index: 3;
         font-size: 4em;
         color: $tertiary;
-        opacity: 0;
-        animation: rotate-spinner 2000ms ease-in-out;
+        animation: rotate-spinner $random-duration ease-in-out;
     }
 }
 
 @keyframes rotate-spinner {
     from {
         transform: rotate(0turn);
-        opacity: 1;
     }
     to {
         transform: rotate(4turn);
-        opacity: 0;
     }
 }
 
@@ -40,5 +38,14 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes loading-page-translation {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
     }
 }

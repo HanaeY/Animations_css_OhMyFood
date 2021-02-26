@@ -39,21 +39,12 @@
         align-items: center;
         width: $mobile-width;
         margin: auto;
-        @include desktop {
-            justify-content: start;
-        }
         &--title {
             font-size: 1.7em;
             margin-bottom: 10px;
         }
-        .fas, .far {
+        &--heart {
             margin-top: 13px;
-            @include small-mobile {
-                //padding-right: 0px;
-            }
-            @include desktop {
-                padding-left: 50px;
-            }
         }
     }
     &__menu {
@@ -130,14 +121,11 @@
         &--detail {
             margin: 0px;
             font-weight: lighter;
-            width: 90%;
+            width: 85%;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
             transition: width 400ms ease-in-out;
-            @include small-mobile {
-                width: 85%;
-            }
             @include tablet {
                 width: 100%;
             }

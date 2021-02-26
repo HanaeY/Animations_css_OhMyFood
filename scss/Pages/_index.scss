@@ -219,6 +219,11 @@
                     font-weight: 300;
                 }
             }
+            &__heart-btn {
+                position: absolute;
+                right: 25px;
+                bottom: 25px;
+            }
         }
     }
 }

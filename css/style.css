@@ -37,8 +37,8 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
   z-index: 2;
-  -webkit-animation: loading-page-opacity 1000ms ease-in-out forwards, loading-page-translation 1ms 1000ms forwards;
-  animation: loading-page-opacity 1000ms ease-in-out forwards, loading-page-translation 1ms 1000ms forwards;
+  -webkit-animation: loading-page-opacity 2000ms ease-in-out forwards, loading-page-translation 1ms 2000ms forwards;
+  animation: loading-page-opacity 2000ms ease-in-out forwards, loading-page-translation 1ms 2000ms forwards;
 }
 .loading__spinner {
   position: fixed;
@@ -49,8 +49,8 @@ button:hover {
   z-index: 3;
   font-size: 4em;
   color: #99E2D0;
-  -webkit-animation: rotate-spinner 1000ms ease-in-out;
-  animation: rotate-spinner 1000ms ease-in-out;
+  -webkit-animation: rotate-spinner 2000ms ease-in-out;
+  animation: rotate-spinner 2000ms ease-in-out;
 }
 
 @-webkit-keyframes rotate-spinner {
@@ -171,14 +171,7 @@ button:hover {
   }
 }
 .heart-button {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  width: 35px;
-  height: 30px;
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
+  position: relative;
 }
 .heart-button:hover, .heart-button:active {
   outline: none;
@@ -196,7 +189,6 @@ button:hover {
 .heart-button .far {
   font-size: 30px;
   color: #8c8c8c;
-  position: relative;
 }
 .heart-button .fas {
   font-size: 30px;
@@ -532,6 +524,11 @@ header .fas {
   padding: 0px 0px 15px 10px;
   font-weight: 300;
 }
+.restaurants__container__card__heart-btn {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
 
 .restaurant-page-container {
   background-color: #f7f7f7;
@@ -580,22 +577,12 @@ header .fas {
   width: 90%;
   margin: auto;
 }
-@media all and (min-width: 1300px) {
-  .restaurant-main__header {
-    justify-content: start;
-  }
-}
 .restaurant-main__header--title {
   font-size: 1.7em;
   margin-bottom: 10px;
 }
-.restaurant-main__header .fas, .restaurant-main__header .far {
+.restaurant-main__header--heart {
   margin-top: 13px;
-}
-@media all and (min-width: 1300px) {
-  .restaurant-main__header .fas, .restaurant-main__header .far {
-    padding-left: 50px;
-  }
 }
 .restaurant-main__menu {
   display: flex;
@@ -714,16 +701,11 @@ header .fas {
 .dish__card--detail {
   margin: 0px;
   font-weight: lighter;
-  width: 90%;
+  width: 85%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   transition: width 400ms ease-in-out;
-}
-@media all and (max-width: 320px) {
-  .dish__card--detail {
-    width: 85%;
-  }
 }
 @media all and (min-width: 736px) {
   .dish__card--detail {

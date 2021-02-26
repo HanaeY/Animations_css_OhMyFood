@@ -30,28 +30,36 @@
 }
 
 .heart-button {
-    position: relative;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
     &:hover, &:active {
         outline: none;
         .far {
             opacity: 0;
         }
         .fas {
-            -webkit-animation: heartfilling 1000ms forwards;;
+            -webkit-animation: heartfilling 1000ms forwards;
             animation: heartfilling 1000ms forwards;
         }
     }
     .far {
-        font-size: 1.7em;
+        font-size: 30px;
         color: $grey;
-        padding-right: 25px;
         opacity: 1;
         transition: opacity 200ms;
     }
     .fas {
-        font-size: 1.7em;
+        font-size: 30px;
         position: absolute;
         top: 0;
+        right: 0;
+        bottom: 0;
         left: 0;
         background: linear-gradient(60deg, $secondary, $primary);
         -webkit-background-clip: text;
@@ -60,49 +68,3 @@
         opacity: 0;
     }
 }
-
-
-/*@keyframes heartfilling {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.heart-button {
-    position: relative;
-    &:hover, &:active {
-        outline: none;
-        .far {
-            opacity: 0;
-        }
-        .fas {
-            -webkit-animation: heartfilling 1000ms forwards;;
-            animation: heartfilling 1000ms forwards;
-        }
-    }
-    .far {
-        font-size: 1.7em;
-        color: $grey;
-        padding-right: 25px;
-        opacity: 1;
-        -webkit-transition: 200ms;
-        transition: opacity 200ms;
-    }
-    .fas {
-        font-size: 1.7em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(60deg, $secondary, $primary);
-        background-clip: text;
-        color: transparent;
-        opacity: 0;
-    }
-}
-*/

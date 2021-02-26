@@ -49,7 +49,7 @@
         .fas, .far {
             margin-top: 13px;
             @include small-mobile {
-                padding-right: 0px;
+                //padding-right: 0px;
             }
             @include desktop {
                 padding-left: 50px;

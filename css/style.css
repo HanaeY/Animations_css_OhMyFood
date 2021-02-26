@@ -37,8 +37,8 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
   z-index: 2;
-  -webkit-animation: loading-page-opacity 2000ms ease-in-out forwards, loading-page-translation 1ms 2000ms forwards;
-  animation: loading-page-opacity 2000ms ease-in-out forwards, loading-page-translation 1ms 2000ms forwards;
+  -webkit-animation: loading-page-opacity 1000ms ease-in-out forwards, loading-page-translation 1ms 1000ms forwards;
+  animation: loading-page-opacity 1000ms ease-in-out forwards, loading-page-translation 1ms 1000ms forwards;
 }
 .loading__spinner {
   position: fixed;
@@ -49,8 +49,8 @@ button:hover {
   z-index: 3;
   font-size: 4em;
   color: #99E2D0;
-  -webkit-animation: rotate-spinner 2000ms ease-in-out;
-  animation: rotate-spinner 2000ms ease-in-out;
+  -webkit-animation: rotate-spinner 1000ms ease-in-out;
+  animation: rotate-spinner 1000ms ease-in-out;
 }
 
 @-webkit-keyframes rotate-spinner {
@@ -177,7 +177,14 @@ button:hover {
   }
 }
 .heart-button {
-  position: relative;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 .heart-button:hover, .heart-button:active {
   outline: none;
@@ -190,16 +197,17 @@ button:hover {
   animation: heartfilling 1000ms forwards;
 }
 .heart-button .far {
-  font-size: 1.7em;
+  font-size: 30px;
   color: #8c8c8c;
-  padding-right: 25px;
   opacity: 1;
   transition: opacity 200ms;
 }
 .heart-button .fas {
-  font-size: 1.7em;
+  font-size: 30px;
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   background: linear-gradient(60deg, #FF79D3, #9356DC);
   -webkit-background-clip: text;
@@ -208,50 +216,6 @@ button:hover {
   opacity: 0;
 }
 
-/*@keyframes heartfilling {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.heart-button {
-    position: relative;
-    &:hover, &:active {
-        outline: none;
-        .far {
-            opacity: 0;
-        }
-        .fas {
-            -webkit-animation: heartfilling 1000ms forwards;;
-            animation: heartfilling 1000ms forwards;
-        }
-    }
-    .far {
-        font-size: 1.7em;
-        color: $grey;
-        padding-right: 25px;
-        opacity: 1;
-        -webkit-transition: 200ms;
-        transition: opacity 200ms;
-    }
-    .fas {
-        font-size: 1.7em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(60deg, $secondary, $primary);
-        background-clip: text;
-        color: transparent;
-        opacity: 0;
-    }
-}
-*/
 header {
   position: relative;
   background-color: white;
@@ -630,11 +594,6 @@ header .fas {
 }
 .restaurant-main__header .fas, .restaurant-main__header .far {
   margin-top: 13px;
-}
-@media all and (max-width: 320px) {
-  .restaurant-main__header .fas, .restaurant-main__header .far {
-    padding-right: 0px;
-  }
 }
 @media all and (min-width: 1300px) {
   .restaurant-main__header .fas, .restaurant-main__header .far {

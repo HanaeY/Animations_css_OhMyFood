@@ -7,25 +7,19 @@
 
 @-webkit-keyframes heartfilling {
     0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
+        transform: scale(0);
     }
     100% {
-        opacity: 1;
+        transform: scale(1);
     }
 }
 
 @keyframes heartfilling {
     0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
+        transform: scale(0);
     }
     100% {
-        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -41,19 +35,22 @@
     &:hover, &:active {
         outline: none;
         .far {
-            opacity: 0;
+            background: linear-gradient(60deg, $secondary, $primary);
+            -webkit-background-clip: text;
+                    background-clip: text;
+            color: transparent;
         }
         .fas {
-            -webkit-animation: heartfilling 1000ms forwards;
-            animation: heartfilling 1000ms forwards;
+            -webkit-animation: heartfilling 700ms ease-in-out forwards;
+            animation: heartfilling 700ms ease-in-out forwards;
         }
     }
     .far {
         font-size: 30px;
         color: $grey;
-        opacity: 1;
-        transition: opacity 200ms;
+        position: relative;
     }
+
     .fas {
         font-size: 30px;
         position: absolute;
@@ -65,6 +62,7 @@
         -webkit-background-clip: text;
                 background-clip: text;
         color: transparent;
-        opacity: 0;
+        transform: scale(0);
+        transform-origin: bottom;
     }
 }

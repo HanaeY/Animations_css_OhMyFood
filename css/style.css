@@ -37,8 +37,8 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
   z-index: 2;
-  -webkit-animation: loading-page-opacity 2000ms ease-in-out forwards, loading-page-translation 1ms 2000ms forwards;
-  animation: loading-page-opacity 2000ms ease-in-out forwards, loading-page-translation 1ms 2000ms forwards;
+  -webkit-animation: loading-page-opacity 3000ms ease-in-out forwards, loading-page-translation 1ms 3000ms forwards;
+  animation: loading-page-opacity 3000ms ease-in-out forwards, loading-page-translation 1ms 3000ms forwards;
 }
 .loading__spinner {
   position: fixed;
@@ -49,8 +49,8 @@ button:hover {
   z-index: 3;
   font-size: 4em;
   color: #99E2D0;
-  -webkit-animation: rotate-spinner 2000ms ease-in-out;
-  animation: rotate-spinner 2000ms ease-in-out;
+  -webkit-animation: rotate-spinner 3000ms ease-in-out;
+  animation: rotate-spinner 3000ms ease-in-out;
 }
 
 @-webkit-keyframes rotate-spinner {
@@ -136,12 +136,12 @@ button:hover {
   bottom: 0;
   left: 0;
   background: linear-gradient(175deg, #fface4, #ae80e5);
+  box-shadow: 4px 5px 9px #bfbfbf;
   opacity: 0;
   transition: opacity 250ms ease-in-out;
   z-index: -1;
 }
 .big-button:hover, .big-button:active {
-  box-shadow: 4px 5px 9px #bfbfbf;
   outline: none;
 }
 .big-button:hover::after, .big-button:active::after {

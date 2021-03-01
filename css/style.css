@@ -181,8 +181,8 @@ button:hover {
 }
 .heart-button:hover .far, .heart-button:active .far {
   background: linear-gradient(60deg, #FF79D3, #9356DC);
+  background-clip: border-box;
   -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
 }
 .heart-button:hover .fas, .heart-button:active .fas {
@@ -201,8 +201,8 @@ button:hover {
   bottom: 0;
   left: 0;
   background: linear-gradient(60deg, #FF79D3, #9356DC);
+  background-clip: border-box;
   -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
   transform: scale(0);
   transform-origin: bottom;

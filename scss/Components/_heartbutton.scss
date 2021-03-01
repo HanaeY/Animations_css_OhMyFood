@@ -32,8 +32,9 @@
         outline: none;
         .far {
             background: linear-gradient(60deg, $secondary, $primary);
+            background-clip: border-box; //ajout
             -webkit-background-clip: text;
-                    background-clip: text;
+                    //background-clip: text;
             color: transparent;
         }
         .fas {
@@ -54,8 +55,9 @@
         bottom: 0;
         left: 0;
         background: linear-gradient(60deg, $secondary, $primary);
+        background-clip: border-box; //ajout
         -webkit-background-clip: text;
-                background-clip: text;
+                //background-clip: text;
         color: transparent;
         transform: scale(0);
         transform-origin: bottom;

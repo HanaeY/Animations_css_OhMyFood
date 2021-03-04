@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -37,8 +36,8 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 1;
   z-index: 2;
-  -webkit-animation: loading-page-opacity 3000ms ease-in-out forwards, loading-page-translation 1ms 3000ms forwards;
-  animation: loading-page-opacity 3000ms ease-in-out forwards, loading-page-translation 1ms 3000ms forwards;
+  -webkit-animation: loading-page-opacity 1000ms ease-in-out forwards, loading-page-translation 1ms 1000ms forwards;
+  animation: loading-page-opacity 1000ms ease-in-out forwards, loading-page-translation 1ms 1000ms forwards;
 }
 .loading__spinner {
   position: fixed;
@@ -49,8 +48,8 @@ button:hover {
   z-index: 3;
   font-size: 4em;
   color: #99E2D0;
-  -webkit-animation: rotate-spinner 3000ms ease-in-out;
-  animation: rotate-spinner 3000ms ease-in-out;
+  -webkit-animation: rotate-spinner 1000ms ease-in-out;
+  animation: rotate-spinner 1000ms ease-in-out;
 }
 
 @-webkit-keyframes rotate-spinner {
@@ -537,32 +536,10 @@ header .fas {
   background-color: #f7f7f7;
 }
 
-.restaurant-banner {
-  height: 250px;
-  background-size: 100%;
-}
-@media all and (max-width: 320px) {
-  .restaurant-banner {
-    height: 200px;
-  }
-}
-@media all and (min-width: 1300px) {
-  .restaurant-banner {
-    background-position: center;
-  }
-}
-.restaurant-banner--palette {
-  background-image: url("../images/photo_plat_la_palette_du_gout.jpg");
-}
-.restaurant-banner--note {
-  background-image: url("../images/photo_plat_la_note_enchantée.jpg");
-  background-position: center;
-}
-.restaurant-banner--francaise {
-  background-image: url("../images/photo_plat_a_la_francaise.jpg");
-}
-.restaurant-banner--delice {
-  background-image: url("../images/photo_plat_le_delice_des_sens.jpg");
+.restaurant-banner__img {
+  width: 100vw;
+  max-height: 40vh;
+  object-fit: cover;
 }
 
 .restaurant-main {

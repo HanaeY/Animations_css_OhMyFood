@@ -1,0 +1,13 @@
+// order : Utils, Vendors, Base, Components, Layout, Pages, Themes
+//compilation : cmd  sass ./scss/main.scss ./css/style.css --watch 
+
+@import "utils/variables";
+@import "utils/mixins";
+@import "base/base";
+@import "components/loadingspinner";
+@import "components/bigbuttons";
+@import "components/heartbutton";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/index";
+@import "pages/restaurantspages";

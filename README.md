@@ -2,7 +2,7 @@
 Projet réalisé dans le cadre du parcours de formation "web développeur" Openclassrooms. 
 
 ## Objectifs
-Apprendre à dynamiser des pages web avec des animations CSS. Maquettes fournies. 
+Apprendre à dynamiser des pages web avec des animations CSS. Maquettes fournies. Approche mobile first. 
 
 Compétences mises à profit : 
 * Mettre en place une structure de navigation pour un site web
